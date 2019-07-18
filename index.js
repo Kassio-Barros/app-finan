@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', indexRoute);
 
-// app.listen(5000, () => {
-//   console.log('Listem Port');
-// });
+app.listen(5000, () => {
+  console.log('Listem Port');
+});
 
 module.exports = app;

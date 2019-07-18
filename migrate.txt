@@ -1,0 +1,1 @@
+npx sequelize-cli model:generate --name Moviment --attributes expiryDate:date,amount:decimal,description:string,paid:int
