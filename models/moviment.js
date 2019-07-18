@@ -15,14 +15,16 @@ module.exports = (sequelize, DataTypes) => {
       },
       amount: {
         type: DataTypes.DECIMAL,
+        defaultValue: 0,
         allowNull: false
       },
       description: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: true
       },
       paid: {
         type: DataTypes.ENUM('pago', 'nao-pago'),
-        allowNull: true
+        defaultValue: 'nao-pago'
       }
     },
     {}

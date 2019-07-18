@@ -7,14 +7,14 @@ chai.use(chaiUuid);
 chai.use(chaiHttp);
 chai.use(chaiDateString);
 
-const app = require('../index');
+const app = require('../app');
 
 const { expect } = chai;
 
 describe('Crud', () => {
   describe('Moviment', () => {
     context('Routes', () => {
-      it('Start Get /', async () => {
+      it('Get start /', async () => {
         const response = await chai
           .request(app)
           .get('/moviment')

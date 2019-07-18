@@ -14,7 +14,8 @@ module.exports = {
         allowNull: false
       },
       amount: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.DECIMAL(12, 3),
+        defaultValue: 0,
         allowNull: false
       },
       description: {
