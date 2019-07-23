@@ -1,0 +1,9 @@
+{
+  "expiryDate": "2019-12-31",
+  "date": "date",
+  "amount": 123464,
+  "description": "teste testesdfsf",
+  "paid": "1, 2",
+  "installment": "true or false",
+  "installmentQuantity": "integer"
+}

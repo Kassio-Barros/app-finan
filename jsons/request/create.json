@@ -1,0 +1,8 @@
+{
+  "expiryDate": "2019-12-31",
+  "amount": 123464,
+  "description": "aluguel",
+  "status": 1,
+  "installment": true,
+  "installmentQuantity": 12
+}

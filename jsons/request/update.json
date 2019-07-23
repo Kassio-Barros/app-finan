@@ -1,0 +1,7 @@
+{
+  "expiryDate": "2019-12-31",
+  "amount": 123464,
+  "description": "teste testesdfsf",
+  "installment": "true or false",
+  "installmentQuantity": "integer"
+}

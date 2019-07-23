@@ -27,7 +27,9 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: 'nao-pago'
       }
     },
-    {}
+    {
+      timestamps: false
+    }
   );
   Moviment.associate = function(models) {
     // associations can be defined here

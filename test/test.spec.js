@@ -23,6 +23,33 @@ describe('Crud', () => {
         expect(response).to.have.status(200);
         expect(expected).to.deep.equal(response.body);
       });
+      it('Get start /', async () => {
+        const response = await chai
+          .request(app)
+          .get('/moviment')
+          .send();
+        const expected = { success: true };
+        expect(response).to.have.status(200);
+        expect(expected).to.deep.equal(response.body);
+      });
+      it('Get start /', async () => {
+        const response = await chai
+          .request(app)
+          .get('/moviment')
+          .send();
+        const expected = { success: true };
+        expect(response).to.have.status(200);
+        expect(expected).to.deep.equal(response.body);
+      });
+      it('Get start /', async () => {
+        const response = await chai
+          .request(app)
+          .get('/moviment')
+          .send();
+        const expected = { success: true };
+        expect(response).to.have.status(200);
+        expect(expected).to.deep.equal(response.body);
+      });
     });
   });
 });

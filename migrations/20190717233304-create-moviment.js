@@ -14,13 +14,11 @@ module.exports = {
         allowNull: false
       },
       amount: {
-        type: Sequelize.DECIMAL(12, 3),
-        defaultValue: 0,
-        allowNull: false
+        type: Sequelize.INTEGER,
+        defaultValue: 0
       },
       description: {
-        type: Sequelize.STRING,
-        allowNull: true
+        type: Sequelize.STRING
       },
       paid: {
         type: Sequelize.ENUM('pago', 'nao-pago'),
