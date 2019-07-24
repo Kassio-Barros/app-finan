@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Moviment = sequelize.define(
-    'Moviment',
+  const Movement = sequelize.define(
+    'Movement',
     {
       id: {
         allowNull: false,
@@ -31,8 +31,8 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false
     }
   );
-  Moviment.associate = function(models) {
+  Movement.associate = function(models) {
     // associations can be defined here
   };
-  return Moviment;
+  return Movement;
 };

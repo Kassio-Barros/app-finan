@@ -1,7 +1,7 @@
-const { Moviment, Sequelize } = require('../models');
+const { Movement } = require('../models');
 
-async function controllerMoviment(body) {
-  const result = await Moviment.create({
+async function controllerMovement(body) {
+  const result = await Movement.create({
     expiryDate: body.expiryDate,
     amount: body.amount,
     description: body.description
@@ -10,5 +10,5 @@ async function controllerMoviment(body) {
 }
 
 module.exports = {
-  controllerMoviment
+  controllerMovement
 };

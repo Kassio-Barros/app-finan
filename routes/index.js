@@ -2,8 +2,8 @@ const express = require('express');
 
 const routes = express.Router();
 
-const moviment = require('./moviment');
+const movement = require('./movement');
 
-routes.use('/moviment', moviment);
+routes.use('/movement', movement);
 
 module.exports = routes;

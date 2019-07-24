@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const create = require('./create');
-const list = require('./list');
-const update = require('./update');
-const destroy = require('./destroy');
+const create = require('./methods/create');
+const list = require('./methods/list');
+const update = require('./methods/update');
+const destroy = require('./methods/destroy');
 
 router.post('/', create);
 router.get('/', list);

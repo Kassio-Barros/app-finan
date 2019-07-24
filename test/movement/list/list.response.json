@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": {
+    "result": [
+      {
+        "id": "031083f3-a1e3-4abd-b215-b9a87cefa769",
+        "name": "nomeTeste",
+        "slug": "nomeTeste",
+        "amount": "0.00",
+        "createdAt": "2019-07-22T15:19:27.000Z",
+        "updatedAt": "2019-07-22T15:19:27.000Z",
+        "deletedAt": null
+      }
+    ]
+  }
+}

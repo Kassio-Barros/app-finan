@@ -2,8 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
-const { createMoviment } = require('../services/moviment/create');
+const { createMovement } = require('../../services/movement/create');
 
-createMoviment(router);
+createMovement(router);
 
 module.exports = router;
