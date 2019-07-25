@@ -1,3 +1,9 @@
-module.exports = (req, res) => {
-  return res.json({ success: true });
-};
+const express = require('express');
+
+const router = express.Router();
+
+const { listMovement } = require('../../controllers/movement/list');
+
+listMovement(router);
+
+module.exports = router;

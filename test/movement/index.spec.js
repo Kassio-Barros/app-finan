@@ -4,9 +4,7 @@ const chaiUuid = require('chai-uuid');
 const chaiDateString = require('chai-date-string');
 const chaiInteger = require('chai-integer');
 
-const { successPostRequest, errorNameRequest } = require('./create/create');
-const { succesDeleteResponse } = require('./delete/delete');
-const { successUpdateRequest } = require('./update/update');
+const { successPostRequest, successUpdateRequest } = require('./create/create');
 
 chai.use(chaiUuid);
 chai.use(chaiHttp);
@@ -59,29 +57,28 @@ describe('Movements', () => {
       expect(response.body.data.amount).to.be.an.integer();
       expect(response.body.data.expiryDate).to.be.a.dateString();
     });
-    // it('Error GET by error Id /', async () => {
-    //   const response = await chai
-    //     .request(app)
-    //     .get('/movement/errorId2132312442342342')
-    //     .send();
-    //   expect(response).to.have.status(404);
-    //   expect(response.body.success).to.have.equal(false);
-    //   expect(response.body.error).to.have.equal('Registro não encontrado!');
-    // });
-    // it('Success GET /', async () => {
-    //   const response = await chai
-    //     .request(app)
-    //     .get('/movement')
-    //     .send();
+    it('Error GET by error Id /', async () => {
+      const response = await chai
+        .request(app)
+        .get('/movement/errorId2132312442342342')
+        .send();
+      expect(response).to.have.status(404);
+      expect(response.body.success).to.have.equal(false);
+      expect(response.body.error).to.have.equal('Registro não encontrado!');
+    });
+    it('Success GET /', async () => {
+      const response = await chai
+        .request(app)
+        .get('/movement')
+        .send();
 
-    //   expect(response).to.have.status(200);
-    //   expect(response.body.success).to.have.equal(true);
-    //   expect(response.body.data.result[0].id).to.be.a.uuid('v4');
-    //   expect(response.body.data.result[0].name).to.be.a('string');
-    //   expect(response.body.data.result[0].amount).to.be.an.integer();
-    //   expect(response.body.data.result[0].createdAt).to.be.a.dateString();
-    //   expect(response.body.data.result[0].updatedAt).to.be.a.dateString();
-    // });
+      expect(response).to.have.status(200);
+      // expect(response.body.success).to.have.equal(true);
+      // expect(response.body.data.result[0].id).to.be.a.uuid('v4');
+      // expect(response.body.data.result[0].name).to.be.a('string');
+      // expect(response.body.data.result[0].amount).to.be.an.integer();
+      // expect(response.body.data.result[0].expiryDate).to.be.a.dateString();
+    });
     // it('Success PUT /', async () => {
     //   const response = await chai
     //     .request(app)
@@ -89,8 +86,14 @@ describe('Movements', () => {
     //     .send(successUpdateRequest);
     //   expect(response).to.have.status(200);
     //   expect(response.body.success).to.have.equal(true);
-    //   expect(response.body.data.name).to.be.a('string');
-    //   expect(response.body.data.name).to.be.equal(successUpdateRequest.name);
+    //   expect(response.body.data.expiryDate).to.be.a.dateString();
+    //   expect(response.body.data.amount).to.be.an.integer();
+    //   expect(response.body.data.expiryDate).to.be.equal(
+    //     successUpdateRequest.exppiryDate
+    //   );
+    //   expect(response.body.data.amount).to.be.equal(
+    //     successUpdateRequest.amount
+    //   );
 
     //   const getById = await chai
     //     .request(app)
@@ -99,17 +102,22 @@ describe('Movements', () => {
     //   expect(getById).to.have.status(200);
     //   expect(getById.body.success).to.have.equal(true);
     //   expect(getById.body.data.id).to.be.a.uuid('v4');
-    //   expect(getById.body.data.name).to.be.a('string');
     //   expect(getById.body.data.amount).to.be.an.integer();
-    //   expect(getById.body.data.createdAt).to.be.a.dateString();
-    //   expect(getById.body.data.updatedAt).to.be.a.dateString();
+    //   expect(getById.body.data.expiryDate).to.be.a.dateString();
+    //   expect(response.body.data.expiryDate).to.be.equal(
+    //     successUpdateRequest.exppiryDate
+    //   );
+    //   expect(response.body.data.amount).to.be.equal(
+    //     successUpdateRequest.amount
+    //   );
     // });
     // it('Success DELETE /', async () => {
     //   const response = await chai
     //     .request(app)
     //     .delete(`/movement/${createId}`)
     //     .send();
-    //   expect(succesDeleteResponse).to.deep.equal(response.body);
+    //   expect(response).to.have.status(200);
+    //   expect(response.body.success).to.have.equal(true);
     // });
   });
 });

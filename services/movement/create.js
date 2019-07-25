@@ -1,16 +1,14 @@
-const { controllerMovement } = require('../../controllers/create');
+const { Movement } = require('../../models');
 
-function createMovement(router) {
-  return router.post('/', async (req, res, next) => {
-    try {
-      const response = await controllerMovement(req.body);
-      res.json({ success: true, data: response });
-    } catch (err) {
-      console.log(err);
-    }
+async function controllerMovementCreate(body) {
+  const result = await Movement.create({
+    expiryDate: body.expiryDate,
+    amount: body.amount,
+    description: body.description
   });
+  return result;
 }
 
 module.exports = {
-  createMovement
+  controllerMovementCreate
 };

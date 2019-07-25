@@ -1,5 +1,5 @@
 const successPostRequest = {
-  expiryDate: '2017-08-18',
+  expiryDate: '2019-07-10',
   amount: 12344,
   description: 'description'
 };
@@ -9,7 +9,13 @@ const errorNameRequest = {
   slug: 'nomeTeste'
 };
 
+const successUpdateRequest = {
+  expiryDate: '2019-07-11',
+  amount: 44321
+};
+
 module.exports = {
   successPostRequest,
-  errorNameRequest
+  errorNameRequest,
+  successUpdateRequest
 };

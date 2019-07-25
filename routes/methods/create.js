@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const { createMovement } = require('../../services/movement/create');
+const { createMovement } = require('../../controllers/movement/create');
 
 createMovement(router);
 
